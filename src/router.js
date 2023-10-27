@@ -3,7 +3,6 @@ import Home from "./pages/Home.js";
 import Lorem from "./pages/Lorem.js";
 import NotFound from "./pages/NotFound.js";
 
-// hashed path: Page
 const routes = {
   "#/": new Home(),
   "#/about": new About(),
@@ -18,7 +17,7 @@ let goToLoremBtn;
  * 특정 페이지에 이벤트리스너를 할당할 경우, 다른 페이지 이동 시 이벤트리스너를 제거해야 합니다.
  * @function
  */
-export const renderPage = async () => {
+export const renderPage = () => {
   const path = window.location.hash || "#/";
   const selectedPage = routes[path] ?? routes[404];
   selectedPage.render();
