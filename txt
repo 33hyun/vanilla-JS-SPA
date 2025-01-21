@@ -1,22 +1,23 @@
-import React from 'react';
-function App() {
-  
-	// <---- 자바스크립트 영역 ---->
+// src/App.jsx
 
-  return (
-  /* <---- HTML/JSX 영역  ---->*/
-    <div
-      style={{
-        height: '100vh',
-        display: ' flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
-   {/* 이곳에 퀴즈를 위한 html 코드를 작성해 주세요 */}
-    </div>
-  );
+import React from "react";
+
+function App() {
+  return <GrandFather />;
 }
+
+function GrandFather() {
+  return <Mother />;
+}
+
+function Mother() {
+	const name = '홍부인';
+  return <Child />;
+}
+
+function Child() {
+  return <div>연결 성공</div>;
+}
+
 
 export default App;
